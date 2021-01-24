@@ -20,11 +20,27 @@ header {
   margin: 1em;
 }
 
-#spaceToPlay {
-  height:30em;
-  background: rgb(4, 100, 4);
-  border-radius: 6px solid rgb(238, 169, 20);
+#colCenter {
+  height: 320px;
+  width: 320px;
+  padding: 5px;
+  display: inline-block;
+  position: relative;
+  text-align: -webkit-center;
 }
+
+#spaceToPlay {
+  height:310px;
+  width: 310px;
+  background: rgb(4, 100, 4);
+  border-radius: 100%;
+  border: solid 10px chocolate;
+}
+
+#bottomRow {
+  height: 280px;
+  align-content: center;
+  }
 
 .styled, #newgame{
   border: 0;
@@ -71,8 +87,8 @@ header {
   box-sizing: border-box;
   color:white;
   font-size: 25px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   perspective: 1000px;
   perspective-origin: -80px -250px;
   position: absolute;
@@ -115,7 +131,7 @@ transform: rotateX(-90deg) translateZ(25px);
   animation: rotate-vert-center 2s linear 1 both;
 }@keyframes rotate-vert-center {
   0% {
-    transform: translate(150px, -100px) rotate(0)
+    transform: translate(150%, -100%) rotate(0)
   }
 
   25% {
@@ -124,12 +140,12 @@ transform: rotateX(-90deg) translateZ(25px);
   }
 
   50% {
-    transform: translateX(-200px) rotate(-1.5turn);
+    transform: translateX(-250%) rotate(-1.5turn);
     animation-timing-function: cubic-bezier(.42,1.38,.61,1.07);
 
   }
 
   100% {
-    transform: translate(-100px, 150px) rotate(0.5turn);
+    transform: translate(-100%, 200%) rotate(0.5turn);
   }
 }
