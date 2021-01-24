@@ -17,10 +17,8 @@
   </header>
   <main>
     <ion-grid>
-      <h2 class="ion-text-center" id="newGame">
-        <button class="favorite styled" type="button" id="newgame">
-          Nouvelle partie
-        </button>
+      <h2 class="ion-text-center">
+        <input type="reset" value="Nouvelle partie" id="newgame">
       </h2>
 
       <ion-row>
@@ -42,11 +40,19 @@
             Score
           </h3>
           <div class="ion-text-center" id="score1">
-            0
+            20
           </div>
         </ion-col>
         <ion-col size="8" size-ld>
-          <div class="ion-text-center" id="spaceToPlay">
+          <div id="spaceToPlay">
+            <section id="dice" class="rotate-vert-center">
+              <div class="side" id="front">1</div>
+              <div class="side" id="back">2</div>
+              <div class="side" id="left">3</div>
+              <div class="side" id="right">4</div>
+              <div class="side" id="top">5</div>
+              <div class="side" id="bottom">6</div>
+            </section>
           </div>
         </ion-col>
         <ion-col size="2" size-ld>
@@ -54,7 +60,7 @@
             Score
           </h3>
           <div class="ion-text-center" id="score2">
-            0
+            10
           </div>
         </ion-col>
       </ion-row>

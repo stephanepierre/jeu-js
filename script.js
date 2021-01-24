@@ -25,6 +25,24 @@ roll.addEventListener('click',()=>{
    // alert(`vous avez eu ${numberRandom}`)
 })
 
+//recupération du lancé vers current
+const hold = document.getElementById("hold")
+hold.addEventListener('click',()=>{
+  var 
+})
+
+//current score player 1
+const current1 = document.getElementById("currentScore1")
+
+
+// Current score player 2
+const current2 = document.getElementById("currentScore2")
+
+
+//création bouton nouvelle partie
+
+
+
 
 
 
