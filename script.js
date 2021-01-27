@@ -18,12 +18,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min+1) ) + min;
 }
 
-//création du lancé de dé
 const roll = document.getElementById("roll")
 roll.addEventListener('click',()=>{
   var numberRandom = getRandomInt(1, 6)
-   // alert(`vous avez eu ${numberRandom}`)
+  alert(`vous avez eu ${numberRandom}`)
+  setTimeout(alert, 3000)
 })
+
+//création du lancé de dé
+
 
 //recupération du lancé vers current
 const hold = document.getElementById("hold")
