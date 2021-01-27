@@ -9,83 +9,86 @@
 </head>
 
 <body>
-  <h1 class="ion-text-center">Le jeu de dé</h1>
-  <header class="ion-text-center">
-    <button class="favorite styled" type="button" id="rules">
-      Règles du jeu
-    </button>
-  </header>
-  <main>
-    <ion-grid>
-      <h2 class="ion-text-center">
-        <input type="reset" value="Nouvelle partie" id="newgame">
-      </h2>
-
-      <ion-row>
-        <ion-col>
-          <h3 class="ion-text-center" id="player1">
-            PLAYER 1
-          </h3>
-        </ion-col>
-        <ion-col>
-          <h3 class="ion-text-center" id="player2">
-            PLAYER 2
-          </h3>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col size="2" size-ld>
-          <h3 class="ion-text-center">
-            Score
-          </h3>
-          <div class="ion-text-center" id="score1">
-            20
-          </div>
-        </ion-col>
-        <ion-col size="8" size-ld>
-          <div id="spaceToPlay">
-            <section id="dice" class="rotate-vert-center">
-              <div class="side" id="front">1</div>
-              <div class="side" id="back">2</div>
-              <div class="side" id="left">3</div>
-              <div class="side" id="right">4</div>
-              <div class="side" id="top">5</div>
-              <div class="side" id="bottom">6</div>
-            </section>
-          </div>
-        </ion-col>
-        <ion-col size="2" size-ld>
-          <h3 class="ion-text-center">
-            Score
-          </h3>
-          <div class="ion-text-center" id="score2">
-            10
-          </div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col class="ion-text-center">
-          <div>CURRENT</div>
-          <div id="currentScore1">0</div>
-        </ion-col>
-        <ion-col class="ion-text-center">
-          <button class="favorite styled" type="button" id="roll">
-          Lancer le dé
+  <ion-grid>
+    <ion-row responsive-md class="ion-justify-content-center">
+      <ion-col size="12">
+        <h1 class="ion-text-center">Le jeu de dé</h1>
+        <header class="ion-text-center">
+          <button class="favorite styled" type="button" id="rules">
+            Règles du jeu
           </button>
-          <button class="favorite styled" type="button" id="hold">
-          Réserver
-          </button>
-        </ion-col>
-        <ion-col class="ion-text-center">
-          <div>CURRENT</div>
-          <div id="currentScore2">0</div>
-        </ion-col>
-      </ion-row>
+        </header>
+      </ion-col>
+      <main>
+        <h2 class="ion-text-center">
+          <input type="reset" value="Nouvelle partie" id="newgame">
+        </h2>
 
-    </ion-grid>
-  </main>
+        <ion-row responsive-sm>
+          <ion-col>
+            <h3 class="ion-text-center" id="player1">
+              PLAYER 1
+            </h3>
+          </ion-col>
+          <ion-col>
+            <h3 class="ion-text-center" id="player2">
+              PLAYER 2
+            </h3>
+          </ion-col>
+        </ion-row>
+
+        <ion-row responsive-sm class="ion-justify-content-center">
+          <ion-col size="auto" size-md id="col1">
+            <h3 class="ion-text-center">
+              Score
+            </h3>
+            <div class="ion-text-center" id="score1">
+              20
+            </div>
+          </ion-col>
+          <ion-col size="auto" size-md id="colCenter">
+            <div id="spaceToPlay">
+              <section id="dice" class="rotate-vert-center">
+                <div class="side" id="front">1</div>
+                <div class="side" id="back">2</div>
+                <div class="side" id="left">3</div>
+                <div class="side" id="right">4</div>
+                <div class="side" id="top">5</div>
+                <div class="side" id="bottom">6</div>
+              </section>
+            </div>
+          </ion-col>
+          <ion-col size="auto" size-md>
+            <h3 class="ion-text-center">
+              Score
+            </h3>
+            <div class="ion-text-center" id="score2">
+              10
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row  id="bottomRow">
+          <ion-col class="ion-text-center">
+            <div>CURRENT</div>
+            <div id="currentScore1">0</div>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <button class="favorite styled" type="button" id="roll">
+            Lancer le dé
+            </button>
+            <button class="favorite styled" type="button" id="hold">
+            Réserver
+            </button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <div>CURRENT</div>
+            <div id="currentScore2">0</div>
+          </ion-col>
+        </ion-row>
+      </main>
+    </ion-row>
+  </ion-grid>
 
   <noscript>
     <p>Merci d'activer Javascript afin de pouvoir bénéficier de toutes les 
