@@ -2,45 +2,27 @@ body {
   background: rgb(134, 76, 9);
   font-family: 'Lato';
   color: white;
+  padding: 0.5em;
 }
 
  main {
   background: lightgrey;
   color: #000;
-  margin-left: 1em;
-  margin-right: 1em;
+  width: 100%;
 }
 
 h1{
   font-size: 40px;
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 0;
 }
 
 header {
-  padding: 0.5em;
-  margin: 1em;
+  margin-bottom: 5px;
 }
-
-#colCenter {
-  height: 320px;
-  width: 320px;
-  padding: 5px;
-  display: inline-block;
-  position: relative;
-  text-align: -webkit-center;
-}
-
-#spaceToPlay {
-  height:310px;
-  width: 310px;
-  background: rgb(4, 100, 4);
-  border-radius: 100%;
-  border: solid 10px chocolate;
-}
-
-#bottomRow {
-  height: 280px;
-  align-content: center;
-  }
 
 .styled, #newgame{
   border: 0;
@@ -82,6 +64,27 @@ header {
   font-size: 40px;
 }
 
+#colCenter {
+  height: 320px;
+  width: 320px;
+  padding: 5px;
+  display: inline-block;
+  position: relative;
+  text-align: -webkit-center;
+}
+
+#spaceToPlay {
+  height:305px;
+  width: 305px;
+  background: rgb(4, 100, 4);
+  border-radius: 100%;
+  border: solid 10px chocolate;
+}
+
+#bottomRow {
+  align-content: center;
+  }
+
 /* création du dé */
 #dice{
   box-sizing: border-box;
@@ -104,27 +107,28 @@ div.side{
   position: absolute;
   background-color: purple;
   border: solid 1px black;
-
 }
+
 #front{
   transform: translateZ(25px);
   background: rgb(98, 47, 238);
 }
 #back{
-transform: rotateY(-180deg) translateZ(25px);
+  transform: rotateY(-180deg) translateZ(25px);
 }
 #left{
-transform: rotateY(-90deg) translateZ(25px);
+  transform: rotateY(-90deg) translateZ(25px);
 }
 #right{
-transform: rotateY(90deg) translateZ(25px);
+  transform: rotateY(90deg) translateZ(25px);
 }
 #top{
-transform: rotateX(90deg) translateZ(25px);
+  transform: rotateX(90deg) translateZ(25px);
 }
 #bottom{
-transform: rotateX(-90deg) translateZ(25px);
+  transform: rotateX(-90deg) translateZ(25px);
 }
+
 
 /*Animation du dé*/
 .rotate-vert-center {
@@ -147,5 +151,62 @@ transform: rotateX(-90deg) translateZ(25px);
 
   100% {
     transform: translate(-100%, 200%) rotate(0.5turn);
+  }
+}
+
+
+
+/* pour ecran tablette et ordi */
+
+@media screen and (min-width: 768px){
+
+  #colCenter {
+    height: 300px;
+    width: auto;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    text-align: -webkit-center;
+  }
+  
+  #spaceToPlay {
+    height:300px;
+    width: 600px;
+    background: rgb(4, 100, 4);
+    border: solid 10px chocolate;
+  }
+  
+  #bottomRow {
+    min-height: 150px;
+    align-content: flex-end;
+    } 
+
+  /*Animation du dé*/
+
+  .rotate-vert-center {
+    animation: rotate-vert-center 2s linear 1 both;
+  }@keyframes rotate-vert-center {
+    0% {
+      transform: translate(150%, -150%) rotate(0)
+    }
+
+    25% {
+      transform: translateX(0px) rotate(-0.7turn);
+      animation-timing-function: cubic-bezier(.25,.06,.87,.86);
+    }
+
+    50% {
+      transform: translateX(-600%) rotate(-1.5turn);
+      animation-timing-function: linear;
+
+    }
+
+    75% {
+      transform: translate(-100%, 200%) rotate(1turn);
+    }
+
+    100% {
+      transform: translate(0);
+    }
   }
 }
