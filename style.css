@@ -308,7 +308,7 @@
     }
 
     50% {
-      transform: translateX(-600%) rotate(-1.5turn);
+      transform: translateX(-700%) rotate(-1.5turn);
       animation-timing-function: linear;
 
     }

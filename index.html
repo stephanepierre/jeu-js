@@ -10,11 +10,7 @@
 
 <body>
   <ion-grid>
-<<<<<<< HEAD
-    <ion-row responsive-md class="ion-justify-content-center">
-=======
     <ion-row responsive-sm class="ion-justify-content-center" id="allContent">
->>>>>>> animation-css
       <ion-col size="12">
         <h1 class="ion-text-center">Le jeu de dé</h1>
         <header class="ion-text-center">
@@ -52,7 +48,7 @@
           </ion-col>
           <ion-col size="auto" size-md id="colCenter">
             <div id="spaceToPlay">
-              <section id="dice" class="rotate-vert-center">
+              <section id="dice">
                 <div class="side" id="front">1</div>
                 <div class="side" id="back">2</div>
                 <div class="side" id="left">3</div>
@@ -78,7 +74,7 @@
             <div id="currentScore1">0</div>
           </ion-col>
           <ion-col class="ion-text-center">
-            <button class="favorite styled" type="button" id="roll">
+            <button class="favorite styled" type="button" id="roll" onclick="rollDice()">
             Lancer le dé
             </button>
             <button class="favorite styled" type="button" id="hold">
