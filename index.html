@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="popover">
   <ion-grid>
     <ion-row responsive-sm class="ion-justify-content-center" id="allContent">
       <ion-col size="12">
@@ -21,7 +21,9 @@
       </ion-col>
       <main>
         <h2 class="ion-text-center">
-          <input type="reset" value="Nouvelle partie" id="newgame">
+          <button class="favorite styled" type="button" id="newgame">
+            Nouvelle partie
+          </button>
         </h2>
 
         <ion-row responsive-sm>
@@ -71,7 +73,7 @@
         <ion-row  id="bottomRow">
           <ion-col class="ion-text-center">
             <div>CURRENT</div>
-            <div id="currentScore1">0</div>
+            <div id="currentScore1">26</div>
           </ion-col>
           <ion-col class="ion-text-center">
             <button class="favorite styled" type="button" id="roll" onclick="rollDice()">
@@ -83,7 +85,7 @@
           </ion-col>
           <ion-col class="ion-text-center">
             <div>CURRENT</div>
-            <div id="currentScore2">0</div>
+            <div id="currentScore2">99</div>
           </ion-col>
         </ion-row>
       </main>

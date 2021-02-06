@@ -18,7 +18,7 @@ const rules = document.getElementById("rules")
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min+1) ) + min;
 }
-
+//animation du dé et afichage du score
 function rollDice() {
   let numberRandom = getRandomInt(1, 6);
   document.getElementById("dice").classList.add("rotate-vert-center");
@@ -27,6 +27,17 @@ function rollDice() {
     document.getElementById("dice").classList.remove("rotate-vert-center");
   }, 2500);
 }
+//bouton nouvelle partie
+const newGame = document.getElementById("newgame");
+
+newGame.addEventListener("click", () => {
+  document.getElementById("score1").innerHTML = 0;
+  document.getElementById("score2").innerHTML = 0;
+  document.getElementById("currentScore1").innerHTML = 0;
+  document.getElementById("currentScore2").innerHTML = 0;
+})
+
+//ajout au current score
 
 
 
