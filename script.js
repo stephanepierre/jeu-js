@@ -19,12 +19,20 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min+1) ) + min;
 }
 //animation du dé et afichage du score
+let oldScore = document.getElementById("currentScore1").textContent = 0
+
 function rollDice() {
   let numberRandom = getRandomInt(1, 6);
   document.getElementById("dice").classList.add("rotate-vert-center");
   setTimeout(function() {
     alert(`Vous avez eu ${numberRandom}`);
     document.getElementById("dice").classList.remove("rotate-vert-center");
+    if (numberRandom === 1){
+      document.getElementById("score1").innerHTML = 0;
+      alert(`Perdu, votre score retombe à 0.`);
+    } else {
+      document.getElementById("currentScore1").textContent= oldScore += numberRandom;
+    }
   }, 2500);
 }
 //bouton nouvelle partie
