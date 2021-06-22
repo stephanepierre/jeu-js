@@ -1,4 +1,4 @@
-//création bouton règles du jeu
+//creation of rules button
 const rules = document.getElementById("rules")
   rules.addEventListener('click',()=>{
     alert(`Règles :
@@ -14,38 +14,74 @@ const rules = document.getElementById("rules")
   })
 
 
-//création nombre aléatoire
+let score = document.getElementById("score");
+let currentScore = document.getElementById("currentScore");
+
+
+
+
+//............................................................................................
+
+//création of random number
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min+1) ) + min;
 }
-//animation du dé et afichage du score
-let oldScore = document.getElementById("currentScore1").textContent = 0
+
+
+//animation of dice and display of current score
+let oldCurrentScore = document.getElementById("currentScore").textContent = 0;
+
 
 function rollDice() {
   let numberRandom = getRandomInt(1, 6);
+
   document.getElementById("dice").classList.add("rotate-vert-center");
+
   setTimeout(function() {
     alert(`Vous avez eu ${numberRandom}`);
     document.getElementById("dice").classList.remove("rotate-vert-center");
+
     if (numberRandom === 1){
-      document.getElementById("score1").innerHTML = 0;
-      alert(`Perdu, votre score retombe à 0.`);
+      document.getElementById("currentScore").textContent = 0;
+      alert(`Perdu, votre score provisoire retombe à 0.`);
     } else {
-      document.getElementById("currentScore1").textContent= oldScore += numberRandom;
+      document.getElementById("currentScore").textContent= oldCurrentScore += numberRandom;
     }
+
   }, 2500);
 }
-//bouton nouvelle partie
+
+
+//function to reset current score
+
+function resetCurrentScore() {
+  currentScore.textContent = 0;
+}
+
+//reset score
+function resetScore() {
+  score.textContent = 0;
+}
+
+
+//button new game
 const newGame = document.getElementById("newgame");
 
 newGame.addEventListener("click", () => {
-  document.getElementById("score1").innerHTML = 0;
-  document.getElementById("score2").innerHTML = 0;
-  document.getElementById("currentScore1").innerHTML = 0;
-  document.getElementById("currentScore2").innerHTML = 0;
+  resetScore();
+  resetCurrentScore();
 })
 
-//ajout au current score
+//add to score
+let hold = document.getElementById("hold");
+let oldScore = document.getElementById("Score").textContent = 0;
+
+hold.addEventListener("click", () => {
+  score.textContent = oldScore + currentScore.textContent;
+  alert (score.textContent);
+  resetCurrentScore();
+
+})
 
 
 

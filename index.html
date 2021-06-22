@@ -6,6 +6,8 @@
   <title>jeu en JS</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dice.css">
+
 </head>
 
 <body id="popover">
@@ -44,8 +46,8 @@
             <h3 class="ion-text-center">
               Score
             </h3>
-            <div class="ion-text-center" id="score1">
-              20
+            <div class="ion-text-center" id="score">
+              0
             </div>
           </ion-col>
           <ion-col size="auto" size-md id="colCenter">
@@ -64,8 +66,8 @@
             <h3 class="ion-text-center">
               Score
             </h3>
-            <div class="ion-text-center" id="score2">
-              10
+            <div class="ion-text-center" id="score">
+              0
             </div>
           </ion-col>
         </ion-row>
@@ -73,7 +75,7 @@
         <ion-row  id="bottomRow">
           <ion-col class="ion-text-center">
             <div>CURRENT</div>
-            <div id="currentScore1">26</div>
+            <div id="currentScore">0</div>
           </ion-col>
           <ion-col class="ion-text-center">
             <button class="favorite styled" type="button" id="roll" onclick="rollDice()">
@@ -85,7 +87,7 @@
           </ion-col>
           <ion-col class="ion-text-center">
             <div>CURRENT</div>
-            <div id="currentScore2">99</div>
+            <div id="currentScore">0</div>
           </ion-col>
         </ion-row>
       </main>
