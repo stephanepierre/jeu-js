@@ -1,3 +1,4 @@
+//declaration of variables
 let activePlayer = 'player 1';
 let randomNumber = 0;
 let currentScore = 0;
@@ -5,8 +6,12 @@ let reserveScore = 0;
 let currentScore2 = 0;
 let reserveScore2 = 0;
 let loseScore = 0;
+let currentText = document.getElementById("currentScore");
+let reserveText = document.getElementById("reserveScore");
+let current = currentScore;
+let reserved = reserveScore;
 
-const rules = document.getElementById("rules")
+const rules = document.getElementById("rules");
 const status = document.getElementById('message');
 const roll = document.getElementById("roll");
 const hold = document.getElementById("hold");
@@ -38,7 +43,6 @@ rules.addEventListener('click',()=>{
 })
 
 
-
 //............................................................................................
 //function to switch between players
 function switchPlayer() {
@@ -47,29 +51,26 @@ function switchPlayer() {
   } else {
     activePlayer = 'player 1';
   }
-}
-
-//function to change variables according to the players
-switch (activePlayer) {
-  case 'player 1': {
-    console.log("1")
-    var currentText = document.getElementById("currentScore");
-    var reserveText = document.getElementById("reserveScore");
-    var current = currentScore;
-    var reserved = reserveScore;
-    break;
-  }
-  case 'player 2': {
-    console.log("2")
-    var currentText = document.getElementById("currentScore2");
-    var reserveText = document.getElementById("reserveScore2");
-    var current = currentScore2;
-    var reserved = reserveScore2;
-    break;
-  }
-  default: {
-    console.log('erreur de sélection de joueur');
-  }
+  //function to change variables according to the players
+  switch (activePlayer) {
+    case 'player 1': {
+      currentText = document.getElementById("currentScore");
+      reserveText = document.getElementById("reserveScore");
+      current = currentScore;
+      reserved = reserveScore;
+      break;
+    }
+    case 'player 2': {
+      currentText = document.getElementById("currentScore2");
+      reserveText = document.getElementById("reserveScore2");
+      current = currentScore2;
+      reserved = reserveScore2;
+      break;
+    }
+    default: {
+      console.log('erreur de sélection de joueur');
+    }
+  }  
 }
 
 
@@ -80,6 +81,9 @@ function newGame() {
   reserveText.textContent = 0;
   current = 0;
   reserved = 0;
+  document.getElementById("currentScore2").textContent = 0;
+  document.getElementById("reserveScore2").textContent = 0;
+
   activePlayer = 'player 1';
 }
 
@@ -128,7 +132,8 @@ function reserve() {
     newGame();
   };
   switchPlayer();
-  currentText.textContent = 0;
+  document.getElementById("currentScore").textContent = 0;
+  document.getElementById("currentScore2").textContent = 0;
 }
 
 
