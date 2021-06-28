@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 
   body {
     background: rgb(134, 76, 9);
@@ -14,23 +14,36 @@
   }
 
   h1{
-    font-size: 40px;
+    font-size: 25px;
     margin-top: 0;
   }
 
-  h2 {
-    margin-bottom: 0;
+  h2{
+    margin: 0;
+    font-size: 11px;
+  }
+
+  h3, .currentText{
+    font-size: 13px;
   }
 
   header {
-    margin-bottom: 5px;
+    margin: 0.3rem;
   }
 
-  .styled{
+  #message{
+    margin-top: 0.3rem;
+  }
+
+  #newgame{
+    margin-top: 0.3rem;
+  }
+
+   .styled{
     border: 0;
     line-height: 2.5;
     padding: 0 20px;
-    font-size: 1rem;
+    font-size: 0.6rem;
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
@@ -53,13 +66,13 @@
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
   }
 
-  #reserveScore, #currentScore{
-    font-size: 40px;
+  #reserveScore, #reserveScore2, #currentScore, #currentScore2{
+    font-size: 15px;
   }
 
   #colCenter {
-    height: 320px;
-    width: 320px;
+    height: 250px;
+    width:  250px;
     padding: 5px;
     display: inline-block;
     position: relative;
@@ -67,8 +80,8 @@
   }
 
   #spaceToPlay {
-    height:305px;
-    width: 305px;
+    height:200px;
+    width: 200px;
     background: rgb(4, 100, 4);
     border-radius: 100%;
     border: solid 10px chocolate;
@@ -147,7 +160,7 @@
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
   }
   
-  #reserveScore, #currentScore{
+  #reserveScore, #reserveScore2, #currentScore, #currentScore2{
     font-size: 40px;
   }  
 
