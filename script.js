@@ -44,10 +44,8 @@ rules.addEventListener('click',()=>{
 function switchPlayer() {
   if (activePlayer === 'player 1') {
     activePlayer = 'player 2';
-    console.log("passe au 2eme player")
   } else {
     activePlayer = 'player 1';
-    console.log("passe au 1er player")
   }
 }
 
@@ -109,6 +107,7 @@ function rollDice() {
   setTimeout(function(){
     if (randomNumber === 1) {
       currentScoreLose();
+      switchPlayer();
     } else {
       status.innerHTML = randomNumberMessage();
       current += randomNumber;
@@ -126,6 +125,7 @@ function reserve() {
   current = 0;
   if (reserved >= 100){
     status.innerHTML = winMessage();
+    newGame();
   };
   switchPlayer();
   currentText.textContent = 0;
